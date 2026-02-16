@@ -1,0 +1,220 @@
+[gd_scene load_steps=8 format=3 uid="uid://bmghve0aw8kfc"]
+
+[ext_resource type="Script" uid="uid://qwnixufh5b1q" path="res://main.gd" id="1_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://ttxopu0v2jtt" path="res://score_area/score_area.tscn" id="1_h2yge"]
+[ext_resource type="PackedScene" uid="uid://co7ergghwj4de" path="res://pin/pin.tscn" id="2_1bvp3"]
+[ext_resource type="Script" uid="uid://baxx7dx0w6ela" path="res://pin/pin_arranger.gd" id="3_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://bv427jukmp1i6" path="res://ball/ball.tscn" id="3_lquwl"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_h2yge"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1bvp3"]
+normal = Vector2(-1, 0)
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_1bvp3")
+
+[node name="ScoreAreas" type="Node2D" parent="."]
+
+[node name="ScoreArea" parent="ScoreAreas" instance=ExtResource("1_h2yge")]
+position = Vector2(76, 644)
+
+[node name="ScoreArea2" parent="ScoreAreas" instance=ExtResource("1_h2yge")]
+position = Vector2(230, 644)
+score_value = 10.0
+
+[node name="ScoreArea3" parent="ScoreAreas" instance=ExtResource("1_h2yge")]
+position = Vector2(380, 644)
+
+[node name="ScoreArea4" parent="ScoreAreas" instance=ExtResource("1_h2yge")]
+position = Vector2(531, 644)
+score_value = 20.0
+
+[node name="ScoreArea5" parent="ScoreAreas" instance=ExtResource("1_h2yge")]
+position = Vector2(685, 644)
+
+[node name="ScoreArea6" parent="ScoreAreas" instance=ExtResource("1_h2yge")]
+position = Vector2(835, 644)
+score_value = 30.0
+
+[node name="ScoreArea7" parent="ScoreAreas" instance=ExtResource("1_h2yge")]
+position = Vector2(986, 644)
+
+[node name="ScoreArea8" parent="ScoreAreas" instance=ExtResource("1_h2yge")]
+position = Vector2(1136, 644)
+
+[node name="Pins" type="Node2D" parent="."]
+script = ExtResource("3_1bvp3")
+start_y = 154.455
+spacing_between_pins = 117.23
+alternating_row_offset_x = 47.535
+pin = ExtResource("2_1bvp3")
+
+[node name="@StaticBody2D@24760" parent="Pins" instance=ExtResource("2_1bvp3")]
+position = Vector2(50, 154.455)
+is_springy = true
+
+[node name="@StaticBody2D@24761" parent="Pins" instance=ExtResource("2_1bvp3")]
+position = Vector2(167.23, 154.455)
+is_springy = true
+
+[node name="@StaticBody2D@24762" parent="Pins" instance=ExtResource("2_1bvp3")]
+position = Vector2(284.46, 154.455)
+is_springy = true
+
+[node name="@StaticBody2D@24763" parent="Pins" instance=ExtResource("2_1bvp3")]
+position = Vector2(401.69, 154.455)
+is_springy = true
+
+[node name="@StaticBody2D@24764" parent="Pins" instance=ExtResource("2_1bvp3")]
+position = Vector2(518.92, 154.455)
+is_springy = true
+
+[node name="@StaticBody2D@24765" parent="Pins" instance=ExtResource("2_1bvp3")]
+position = Vector2(636.15, 154.455)
+is_springy = true
+
+[node name="@StaticBody2D@24766" parent="Pins" instance=ExtResource("2_1bvp3")]
+position = Vector2(753.38, 154.455)
+is_springy = true
+
+[node name="@StaticBody2D@24767" parent="Pins" instance=ExtResource("2_1bvp3")]
+position = Vector2(870.61, 154.455)
+is_springy = true
+
+[node name="@StaticBody2D@24768" parent="Pins" instance=ExtResource("2_1bvp3")]
+position = Vector2(987.84, 154.455)
+is_springy = true
+
+[node name="@StaticBody2D@24769" parent="Pins" instance=ExtResource("2_1bvp3")]
+position = Vector2(1105.07, 154.455)
+is_springy = true
+
+[node name="@StaticBody2D@24770" parent="Pins" instance=ExtResource("2_1bvp3")]
+position = Vector2(1222.3, 154.455)
+is_springy = true
+
+[node name="@StaticBody2D@24771" parent="Pins" instance=ExtResource("2_1bvp3")]
+position = Vector2(97.535, 271.685)
+
+[node name="@StaticBody2D@24772" parent="Pins" instance=ExtResource("2_1bvp3")]
+position = Vector2(214.765, 271.685)
+
+[node name="@StaticBody2D@24773" parent="Pins" instance=ExtResource("2_1bvp3")]
+position = Vector2(331.995, 271.685)
+
+[node name="@StaticBody2D@24774" parent="Pins" instance=ExtResource("2_1bvp3")]
+position = Vector2(449.225, 271.685)
+
+[node name="@StaticBody2D@24775" parent="Pins" instance=ExtResource("2_1bvp3")]
+position = Vector2(566.455, 271.685)
+
+[node name="@StaticBody2D@24776" parent="Pins" instance=ExtResource("2_1bvp3")]
+position = Vector2(683.685, 271.685)
+
+[node name="@StaticBody2D@24777" parent="Pins" instance=ExtResource("2_1bvp3")]
+position = Vector2(800.915, 271.685)
+
+[node name="@StaticBody2D@24778" parent="Pins" instance=ExtResource("2_1bvp3")]
+position = Vector2(918.145, 271.685)
+
+[node name="@StaticBody2D@24779" parent="Pins" instance=ExtResource("2_1bvp3")]
+position = Vector2(1035.375, 271.685)
+
+[node name="@StaticBody2D@24780" parent="Pins" instance=ExtResource("2_1bvp3")]
+position = Vector2(1152.605, 271.685)
+
+[node name="@StaticBody2D@24781" parent="Pins" instance=ExtResource("2_1bvp3")]
+position = Vector2(50, 388.915)
+
+[node name="@StaticBody2D@24782" parent="Pins" instance=ExtResource("2_1bvp3")]
+position = Vector2(167.23, 388.915)
+
+[node name="@StaticBody2D@24783" parent="Pins" instance=ExtResource("2_1bvp3")]
+position = Vector2(284.46, 388.915)
+
+[node name="@StaticBody2D@24784" parent="Pins" instance=ExtResource("2_1bvp3")]
+position = Vector2(401.69, 388.915)
+
+[node name="@StaticBody2D@24785" parent="Pins" instance=ExtResource("2_1bvp3")]
+position = Vector2(518.92, 388.915)
+
+[node name="@StaticBody2D@24786" parent="Pins" instance=ExtResource("2_1bvp3")]
+position = Vector2(636.15, 388.915)
+
+[node name="@StaticBody2D@24787" parent="Pins" instance=ExtResource("2_1bvp3")]
+position = Vector2(753.38, 388.915)
+
+[node name="@StaticBody2D@24788" parent="Pins" instance=ExtResource("2_1bvp3")]
+position = Vector2(870.61, 388.915)
+
+[node name="@StaticBody2D@24789" parent="Pins" instance=ExtResource("2_1bvp3")]
+position = Vector2(987.84, 388.915)
+
+[node name="@StaticBody2D@24790" parent="Pins" instance=ExtResource("2_1bvp3")]
+position = Vector2(1105.07, 388.915)
+
+[node name="@StaticBody2D@24791" parent="Pins" instance=ExtResource("2_1bvp3")]
+position = Vector2(1222.3, 388.915)
+
+[node name="@StaticBody2D@24792" parent="Pins" instance=ExtResource("2_1bvp3")]
+position = Vector2(97.535, 506.145)
+
+[node name="@StaticBody2D@24793" parent="Pins" instance=ExtResource("2_1bvp3")]
+position = Vector2(214.765, 506.145)
+
+[node name="@StaticBody2D@24794" parent="Pins" instance=ExtResource("2_1bvp3")]
+position = Vector2(331.995, 506.145)
+
+[node name="@StaticBody2D@24795" parent="Pins" instance=ExtResource("2_1bvp3")]
+position = Vector2(449.225, 506.145)
+
+[node name="@StaticBody2D@24796" parent="Pins" instance=ExtResource("2_1bvp3")]
+position = Vector2(566.455, 506.145)
+
+[node name="@StaticBody2D@24797" parent="Pins" instance=ExtResource("2_1bvp3")]
+position = Vector2(683.685, 506.145)
+
+[node name="@StaticBody2D@24798" parent="Pins" instance=ExtResource("2_1bvp3")]
+position = Vector2(800.915, 506.145)
+
+[node name="@StaticBody2D@24799" parent="Pins" instance=ExtResource("2_1bvp3")]
+position = Vector2(918.145, 506.145)
+
+[node name="@StaticBody2D@24800" parent="Pins" instance=ExtResource("2_1bvp3")]
+position = Vector2(1035.375, 506.145)
+
+[node name="@StaticBody2D@24801" parent="Pins" instance=ExtResource("2_1bvp3")]
+position = Vector2(1152.605, 506.145)
+
+[node name="Ball" parent="." instance=ExtResource("3_lquwl")]
+position = Vector2(782, 52)
+bounce_strength = 300.0
+
+[node name="Ball2" parent="." instance=ExtResource("3_lquwl")]
+position = Vector2(404, 82)
+bounce_strength = 1000.0
+
+[node name="Ball3" parent="." instance=ExtResource("3_lquwl")]
+position = Vector2(281, 19)
+bounce_strength = 200.0
+
+[node name="Ball4" parent="." instance=ExtResource("3_lquwl")]
+position = Vector2(683, 113)
+bounce_strength = 1000.0
+
+[node name="Ball5" parent="." instance=ExtResource("3_lquwl")]
+position = Vector2(560, 50)
+bounce_strength = 200.0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_h2yge")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(1156, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+shape = SubResource("WorldBoundaryShape2D_1bvp3")

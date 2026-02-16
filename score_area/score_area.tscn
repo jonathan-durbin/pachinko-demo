@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://ttxopu0v2jtt"]
+
+[ext_resource type="Script" uid="uid://e6seppy43tqb" path="res://score_area/score_area.gd" id="1_nc6oo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wo35j"]
+size = Vector2(150, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cwrou"]
+size = Vector2(17.99, 120)
+
+[sub_resource type="Gradient" id="Gradient_pw2qd"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.7666196, 0.76661956, 0.76661956, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_bwpaq"]
+gradient = SubResource("Gradient_pw2qd")
+
+[node name="ScoreArea" type="Area2D"]
+script = ExtResource("1_nc6oo")
+
+[node name="ScoreAreaCollisionShape" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_wo35j")
+
+[node name="RightGoalPost" type="StaticBody2D" parent="."]
+position = Vector2(74, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightGoalPost"]
+shape = SubResource("RectangleShape2D_cwrou")
+
+[node name="LeftGoalPost" type="StaticBody2D" parent="."]
+position = Vector2(-75, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftGoalPost"]
+shape = SubResource("RectangleShape2D_cwrou")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-75.5, -2.5)
+scale = Vector2(0.26562494, 1.859375)
+texture = SubResource("GradientTexture2D_bwpaq")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(74.999985, -2.5)
+scale = Vector2(0.26562494, 1.859375)
+texture = SubResource("GradientTexture2D_bwpaq")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -44.0
+offset_top = -37.0
+offset_right = 44.0
+offset_bottom = 30.0

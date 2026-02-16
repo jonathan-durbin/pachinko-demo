@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://co7ergghwj4de"]
+
+[ext_resource type="Script" uid="uid://m5d8ff2w8spw" path="res://pin/pin.gd" id="1_5hb4e"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c85u6"]
+radius = 20.0
+
+[sub_resource type="Gradient" id="Gradient_nikp6"]
+offsets = PackedFloat32Array(0.46835443, 0.5021097)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_gflbs"]
+gradient = SubResource("Gradient_nikp6")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[node name="Pin" type="StaticBody2D"]
+script = ExtResource("1_5hb4e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_c85u6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.7713904, 0.2575322, 0.23180386, 1)
+texture = SubResource("GradientTexture2D_gflbs")
