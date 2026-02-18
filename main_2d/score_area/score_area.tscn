@@ -1,12 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://ttxopu0v2jtt"]
+[gd_scene load_steps=5 format=3 uid="uid://ttxopu0v2jtt"]
 
-[ext_resource type="Script" uid="uid://e6seppy43tqb" path="res://score_area/score_area.gd" id="1_nc6oo"]
+[ext_resource type="Script" uid="uid://e6seppy43tqb" path="res://main_2d/score_area/score_area.gd" id="1_nc6oo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wo35j"]
 size = Vector2(150, 100)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cwrou"]
-size = Vector2(17.99, 120)
 
 [sub_resource type="Gradient" id="Gradient_pw2qd"]
 offsets = PackedFloat32Array(0)
@@ -24,14 +21,15 @@ shape = SubResource("RectangleShape2D_wo35j")
 [node name="RightGoalPost" type="StaticBody2D" parent="."]
 position = Vector2(74, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RightGoalPost"]
-shape = SubResource("RectangleShape2D_cwrou")
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="RightGoalPost"]
+position = Vector2(2, 0)
+polygon = PackedVector2Array(-9, -61, -9, 57, 9, 57, 9, -62, 0, -71)
 
 [node name="LeftGoalPost" type="StaticBody2D" parent="."]
 position = Vector2(-75, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftGoalPost"]
-shape = SubResource("RectangleShape2D_cwrou")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LeftGoalPost"]
+polygon = PackedVector2Array(-9, -61, -9, 57, 9, 57, 9, -62, 0, -71)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-75.5, -2.5)

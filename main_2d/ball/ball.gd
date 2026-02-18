@@ -16,3 +16,7 @@ func _on_body_entered(body: Node) -> void:
 	if body is Pin and body.is_springy:
 		var to_ball: Vector2 = body.global_position.direction_to(global_position)
 		apply_central_impulse(to_ball * bounce_strength)
+		if body.has_method("tween_sprite"):
+			body.tween_sprite()
+		if body.has_method("spawn_ball_at") and randf() < 0.1:
+			body.spawn_ball_at(global_position)

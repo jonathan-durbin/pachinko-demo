@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://co7ergghwj4de"]
 
-[ext_resource type="Script" uid="uid://m5d8ff2w8spw" path="res://pin/pin.gd" id="1_5hb4e"]
+[ext_resource type="Script" uid="uid://m5d8ff2w8spw" path="res://main_2d/pin/pin.gd" id="1_5hb4e"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_c85u6"]
-radius = 20.0
+radius = 5.0
 
 [sub_resource type="Gradient" id="Gradient_nikp6"]
 offsets = PackedFloat32Array(0.46835443, 0.5021097)
@@ -21,5 +21,6 @@ script = ExtResource("1_5hb4e")
 shape = SubResource("CircleShape2D_c85u6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0.7713904, 0.2575322, 0.23180386, 1)
+modulate = Color(0.42209658, 0.3520423, 0.90574497, 1)
+scale = Vector2(0.24, 0.24)
 texture = SubResource("GradientTexture2D_gflbs")

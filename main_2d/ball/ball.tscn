@@ -1,9 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://bv427jukmp1i6"]
 
-[ext_resource type="Script" uid="uid://68fbuu78kau" path="res://ball/ball.gd" id="1_6plaf"]
+[ext_resource type="Script" uid="uid://68fbuu78kau" path="res://main_2d/ball/ball.gd" id="1_6plaf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cbx31"]
-radius = 30.0
 
 [sub_resource type="Gradient" id="Gradient_x8fbi"]
 offsets = PackedFloat32Array(0.556962, 0.5907173)
@@ -27,15 +26,16 @@ fill_from = Vector2(0.5, 0.5)
 contact_monitor = true
 max_contacts_reported = 12
 script = ExtResource("1_6plaf")
+bounce_strength = 300.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_cbx31")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 0, 1)
-scale = Vector2(1.175, 1.175)
+scale = Vector2(0.395, 0.395)
 texture = SubResource("GradientTexture2D_41u45")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
-scale = Vector2(0.935, 0.935)
+scale = Vector2(0.255, 0.255)
 texture = SubResource("GradientTexture2D_hgol0")

@@ -11,10 +11,15 @@ config_version=5
 [application]
 
 config/name="Pachinko Demo"
-run/main_scene="uid://bmghve0aw8kfc"
+run/main_scene="uid://butwy6tf7t0wq"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 SignalBus="*res://globals/signal_bus.gd"
+
+[display]
+
+window/size/viewport_width=648
+window/size/viewport_height=800

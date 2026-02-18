@@ -1,0 +1,606 @@
+[gd_scene load_steps=8 format=3 uid="uid://bmghve0aw8kfc"]
+
+[ext_resource type="PackedScene" uid="uid://ttxopu0v2jtt" path="res://main_2d/score_area/score_area.tscn" id="2_13uql"]
+[ext_resource type="Script" uid="uid://baxx7dx0w6ela" path="res://main_2d/pin/pin_arranger.gd" id="3_yhyqj"]
+[ext_resource type="PackedScene" uid="uid://co7ergghwj4de" path="res://main_2d/pin/pin.tscn" id="4_q6avo"]
+[ext_resource type="Script" uid="uid://coysdx4pkfxaj" path="res://main_2d/ball/ball_spawner.gd" id="6_coknk"]
+[ext_resource type="PackedScene" uid="uid://bv427jukmp1i6" path="res://main_2d/ball/ball.tscn" id="7_exwtt"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_h2yge"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1bvp3"]
+normal = Vector2(-1, 0)
+
+[node name="Main2D" type="Node2D"]
+
+[node name="ScoreAreas" type="Node2D" parent="."]
+
+[node name="ScoreArea" parent="ScoreAreas" instance=ExtResource("2_13uql")]
+position = Vector2(81, 799)
+
+[node name="ScoreArea2" parent="ScoreAreas" instance=ExtResource("2_13uql")]
+position = Vector2(244, 799)
+score_value = 10.0
+
+[node name="ScoreArea3" parent="ScoreAreas" instance=ExtResource("2_13uql")]
+position = Vector2(403, 799)
+
+[node name="ScoreArea4" parent="ScoreAreas" instance=ExtResource("2_13uql")]
+position = Vector2(569, 799)
+score_value = 20.0
+
+[node name="PinArranger" type="Node2D" parent="."]
+script = ExtResource("3_yhyqj")
+start_y = 136.905
+start_x = 34.8
+x_spacing_between_pins = 45.025
+y_spacing_between_pins = 48.24
+alternating_row_offset_x = 27.07
+pin_radius = 10.0
+spring_chance_percent = 0.324
+pin = ExtResource("4_q6avo")
+
+[node name="Pin" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(34.8, 136.905)
+is_springy = true
+
+[node name="@StaticBody2D@27774" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(79.825, 136.905)
+is_springy = true
+
+[node name="@StaticBody2D@27775" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(124.85, 136.905)
+
+[node name="@StaticBody2D@27776" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(169.875, 136.905)
+
+[node name="@StaticBody2D@27777" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(214.9, 136.905)
+
+[node name="@StaticBody2D@27778" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(259.925, 136.905)
+
+[node name="@StaticBody2D@27779" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(304.95, 136.905)
+is_springy = true
+
+[node name="@StaticBody2D@27780" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(349.975, 136.905)
+
+[node name="@StaticBody2D@27781" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(395, 136.905)
+is_springy = true
+
+[node name="@StaticBody2D@27782" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(440.025, 136.905)
+
+[node name="@StaticBody2D@27783" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(485.05, 136.905)
+
+[node name="@StaticBody2D@27784" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(530.075, 136.905)
+is_springy = true
+
+[node name="@StaticBody2D@27785" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(575.1, 136.905)
+
+[node name="@StaticBody2D@27786" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(620.125, 136.905)
+
+[node name="@StaticBody2D@27787" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(61.87, 185.145)
+is_springy = true
+
+[node name="@StaticBody2D@27788" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(106.895, 185.145)
+
+[node name="@StaticBody2D@27789" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(151.92, 185.145)
+is_springy = true
+
+[node name="@StaticBody2D@27790" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(196.945, 185.145)
+is_springy = true
+
+[node name="@StaticBody2D@27791" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(241.97, 185.145)
+
+[node name="@StaticBody2D@27792" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(286.995, 185.145)
+
+[node name="@StaticBody2D@27793" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(332.02, 185.145)
+
+[node name="@StaticBody2D@27794" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(377.045, 185.145)
+
+[node name="@StaticBody2D@27795" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(422.07, 185.145)
+is_springy = true
+
+[node name="@StaticBody2D@27796" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(467.095, 185.145)
+
+[node name="@StaticBody2D@27797" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(512.12, 185.145)
+
+[node name="@StaticBody2D@27798" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(557.145, 185.145)
+
+[node name="@StaticBody2D@27799" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(602.17, 185.145)
+is_springy = true
+
+[node name="@StaticBody2D@27800" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(34.8, 233.385)
+is_springy = true
+
+[node name="@StaticBody2D@27801" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(79.825, 233.385)
+is_springy = true
+
+[node name="@StaticBody2D@27802" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(124.85, 233.385)
+
+[node name="@StaticBody2D@27803" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(169.875, 233.385)
+is_springy = true
+
+[node name="@StaticBody2D@27804" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(214.9, 233.385)
+is_springy = true
+
+[node name="@StaticBody2D@27805" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(259.925, 233.385)
+is_springy = true
+
+[node name="@StaticBody2D@27806" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(304.95, 233.385)
+is_springy = true
+
+[node name="@StaticBody2D@27807" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(349.975, 233.385)
+is_springy = true
+
+[node name="@StaticBody2D@27808" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(395, 233.385)
+
+[node name="@StaticBody2D@27809" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(440.025, 233.385)
+
+[node name="@StaticBody2D@27810" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(485.05, 233.385)
+
+[node name="@StaticBody2D@27811" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(530.075, 233.385)
+is_springy = true
+
+[node name="@StaticBody2D@27812" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(575.1, 233.385)
+is_springy = true
+
+[node name="@StaticBody2D@27813" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(620.125, 233.385)
+
+[node name="@StaticBody2D@27814" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(61.87, 281.625)
+
+[node name="@StaticBody2D@27815" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(106.895, 281.625)
+is_springy = true
+
+[node name="@StaticBody2D@27816" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(151.92, 281.625)
+is_springy = true
+
+[node name="@StaticBody2D@27817" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(196.945, 281.625)
+
+[node name="@StaticBody2D@27818" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(241.97, 281.625)
+
+[node name="@StaticBody2D@27819" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(286.995, 281.625)
+
+[node name="@StaticBody2D@27820" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(332.02, 281.625)
+
+[node name="@StaticBody2D@27821" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(377.045, 281.625)
+
+[node name="@StaticBody2D@27822" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(422.07, 281.625)
+
+[node name="@StaticBody2D@27823" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(467.095, 281.625)
+
+[node name="@StaticBody2D@27824" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(512.12, 281.625)
+is_springy = true
+
+[node name="@StaticBody2D@27825" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(557.145, 281.625)
+is_springy = true
+
+[node name="@StaticBody2D@27826" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(602.17, 281.625)
+
+[node name="@StaticBody2D@27827" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(34.8, 329.865)
+
+[node name="@StaticBody2D@27828" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(79.825, 329.865)
+
+[node name="@StaticBody2D@27829" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(124.85, 329.865)
+is_springy = true
+
+[node name="@StaticBody2D@27830" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(169.875, 329.865)
+
+[node name="@StaticBody2D@27831" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(214.9, 329.865)
+
+[node name="@StaticBody2D@27832" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(259.925, 329.865)
+is_springy = true
+
+[node name="@StaticBody2D@27833" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(304.95, 329.865)
+
+[node name="@StaticBody2D@27834" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(349.975, 329.865)
+is_springy = true
+
+[node name="@StaticBody2D@27835" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(395, 329.865)
+
+[node name="@StaticBody2D@27836" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(440.025, 329.865)
+
+[node name="@StaticBody2D@27837" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(485.05, 329.865)
+
+[node name="@StaticBody2D@27838" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(530.075, 329.865)
+is_springy = true
+
+[node name="@StaticBody2D@27839" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(575.1, 329.865)
+
+[node name="@StaticBody2D@27840" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(620.125, 329.865)
+
+[node name="@StaticBody2D@27841" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(61.87, 378.105)
+
+[node name="@StaticBody2D@27842" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(106.895, 378.105)
+is_springy = true
+
+[node name="@StaticBody2D@27843" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(151.92, 378.105)
+
+[node name="@StaticBody2D@27844" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(196.945, 378.105)
+
+[node name="@StaticBody2D@27845" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(241.97, 378.105)
+is_springy = true
+
+[node name="@StaticBody2D@27846" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(286.995, 378.105)
+
+[node name="@StaticBody2D@27847" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(332.02, 378.105)
+is_springy = true
+
+[node name="@StaticBody2D@27848" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(377.045, 378.105)
+
+[node name="@StaticBody2D@27849" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(422.07, 378.105)
+
+[node name="@StaticBody2D@27850" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(467.095, 378.105)
+is_springy = true
+
+[node name="@StaticBody2D@27851" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(512.12, 378.105)
+
+[node name="@StaticBody2D@27852" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(557.145, 378.105)
+
+[node name="@StaticBody2D@27853" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(602.17, 378.105)
+
+[node name="@StaticBody2D@27854" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(34.8, 426.345)
+
+[node name="@StaticBody2D@27855" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(79.825, 426.345)
+
+[node name="@StaticBody2D@27856" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(124.85, 426.345)
+is_springy = true
+
+[node name="@StaticBody2D@27857" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(169.875, 426.345)
+
+[node name="@StaticBody2D@27858" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(214.9, 426.345)
+
+[node name="@StaticBody2D@27859" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(259.925, 426.345)
+
+[node name="@StaticBody2D@27860" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(304.95, 426.345)
+
+[node name="@StaticBody2D@27861" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(349.975, 426.345)
+
+[node name="@StaticBody2D@27862" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(395, 426.345)
+
+[node name="@StaticBody2D@27863" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(440.025, 426.345)
+
+[node name="@StaticBody2D@27864" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(485.05, 426.345)
+
+[node name="@StaticBody2D@27865" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(530.075, 426.345)
+
+[node name="@StaticBody2D@27866" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(575.1, 426.345)
+
+[node name="@StaticBody2D@27867" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(620.125, 426.345)
+
+[node name="@StaticBody2D@27868" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(61.87, 474.585)
+
+[node name="@StaticBody2D@27869" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(106.895, 474.585)
+is_springy = true
+
+[node name="@StaticBody2D@27870" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(151.92, 474.585)
+is_springy = true
+
+[node name="@StaticBody2D@27871" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(196.945, 474.585)
+
+[node name="@StaticBody2D@27872" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(241.97, 474.585)
+
+[node name="@StaticBody2D@27873" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(286.995, 474.585)
+is_springy = true
+
+[node name="@StaticBody2D@27874" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(332.02, 474.585)
+
+[node name="@StaticBody2D@27875" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(377.045, 474.585)
+is_springy = true
+
+[node name="@StaticBody2D@27876" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(422.07, 474.585)
+
+[node name="@StaticBody2D@27877" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(467.095, 474.585)
+
+[node name="@StaticBody2D@27878" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(512.12, 474.585)
+is_springy = true
+
+[node name="@StaticBody2D@27879" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(557.145, 474.585)
+is_springy = true
+
+[node name="@StaticBody2D@27880" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(602.17, 474.585)
+
+[node name="@StaticBody2D@27881" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(34.8, 522.825)
+
+[node name="@StaticBody2D@27882" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(79.825, 522.825)
+
+[node name="@StaticBody2D@27883" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(124.85, 522.825)
+
+[node name="@StaticBody2D@27884" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(169.875, 522.825)
+
+[node name="@StaticBody2D@27885" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(214.9, 522.825)
+
+[node name="@StaticBody2D@27886" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(259.925, 522.825)
+
+[node name="@StaticBody2D@27887" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(304.95, 522.825)
+is_springy = true
+
+[node name="@StaticBody2D@27888" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(349.975, 522.825)
+
+[node name="@StaticBody2D@27889" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(395, 522.825)
+
+[node name="@StaticBody2D@27890" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(440.025, 522.825)
+is_springy = true
+
+[node name="@StaticBody2D@27891" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(485.05, 522.825)
+
+[node name="@StaticBody2D@27892" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(530.075, 522.825)
+is_springy = true
+
+[node name="@StaticBody2D@27893" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(575.1, 522.825)
+
+[node name="@StaticBody2D@27894" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(620.125, 522.825)
+
+[node name="@StaticBody2D@27895" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(61.87, 571.065)
+
+[node name="@StaticBody2D@27896" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(106.895, 571.065)
+is_springy = true
+
+[node name="@StaticBody2D@27897" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(151.92, 571.065)
+
+[node name="@StaticBody2D@27898" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(196.945, 571.065)
+is_springy = true
+
+[node name="@StaticBody2D@27899" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(241.97, 571.065)
+
+[node name="@StaticBody2D@27900" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(286.995, 571.065)
+is_springy = true
+
+[node name="@StaticBody2D@27901" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(332.02, 571.065)
+
+[node name="@StaticBody2D@27902" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(377.045, 571.065)
+is_springy = true
+
+[node name="@StaticBody2D@27903" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(422.07, 571.065)
+is_springy = true
+
+[node name="@StaticBody2D@27904" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(467.095, 571.065)
+is_springy = true
+
+[node name="@StaticBody2D@27905" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(512.12, 571.065)
+
+[node name="@StaticBody2D@27906" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(557.145, 571.065)
+
+[node name="@StaticBody2D@27907" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(602.17, 571.065)
+is_springy = true
+
+[node name="@StaticBody2D@27908" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(34.8, 619.305)
+
+[node name="@StaticBody2D@27909" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(79.825, 619.305)
+is_springy = true
+
+[node name="@StaticBody2D@27910" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(124.85, 619.305)
+
+[node name="@StaticBody2D@27911" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(169.875, 619.305)
+
+[node name="@StaticBody2D@27912" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(214.9, 619.305)
+is_springy = true
+
+[node name="@StaticBody2D@27913" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(259.925, 619.305)
+
+[node name="@StaticBody2D@27914" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(304.95, 619.305)
+
+[node name="@StaticBody2D@27915" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(349.975, 619.305)
+
+[node name="@StaticBody2D@27916" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(395, 619.305)
+
+[node name="@StaticBody2D@27917" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(440.025, 619.305)
+
+[node name="@StaticBody2D@27918" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(485.05, 619.305)
+is_springy = true
+
+[node name="@StaticBody2D@27919" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(530.075, 619.305)
+
+[node name="@StaticBody2D@27920" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(575.1, 619.305)
+
+[node name="@StaticBody2D@27921" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(620.125, 619.305)
+
+[node name="@StaticBody2D@27922" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(61.87, 667.545)
+is_springy = true
+
+[node name="@StaticBody2D@27923" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(106.895, 667.545)
+is_springy = true
+
+[node name="@StaticBody2D@27924" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(151.92, 667.545)
+
+[node name="@StaticBody2D@27925" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(196.945, 667.545)
+is_springy = true
+
+[node name="@StaticBody2D@27926" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(241.97, 667.545)
+is_springy = true
+
+[node name="@StaticBody2D@27927" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(286.995, 667.545)
+
+[node name="@StaticBody2D@27928" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(332.02, 667.545)
+
+[node name="@StaticBody2D@27929" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(377.045, 667.545)
+
+[node name="@StaticBody2D@27930" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(422.07, 667.545)
+
+[node name="@StaticBody2D@27931" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(467.095, 667.545)
+is_springy = true
+
+[node name="@StaticBody2D@27932" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(512.12, 667.545)
+
+[node name="@StaticBody2D@27933" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(557.145, 667.545)
+
+[node name="@StaticBody2D@27934" parent="PinArranger" instance=ExtResource("4_q6avo")]
+position = Vector2(602.17, 667.545)
+
+[node name="BallSpawner" type="Node2D" parent="."]
+position = Vector2(0, 54)
+script = ExtResource("6_coknk")
+cycles_per_second = 0.25
+ball_initial_impulse = 400.0
+wait_time = 1.0
+ball_scene = ExtResource("7_exwtt")
+
+[node name="LeftWall" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall"]
+shape = SubResource("WorldBoundaryShape2D_h2yge")
+
+[node name="RightWall" type="StaticBody2D" parent="."]
+position = Vector2(650, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall"]
+shape = SubResource("WorldBoundaryShape2D_1bvp3")
+
+[node name="TestBall" parent="." instance=ExtResource("7_exwtt")]
+position = Vector2(260, 70)
